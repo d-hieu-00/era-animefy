@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="base">10dp</dimen>
+    <dimen name="basex0.5">5dp</dimen>
+    <dimen name="basex0.2">2dp</dimen>
+    <dimen name="basex2">20dp</dimen>
+    <dimen name="basex2.5">25dp</dimen>
+    <dimen name="basex3">30dp</dimen>
+    <dimen name="basex1.5">15dp</dimen>
+</resources>

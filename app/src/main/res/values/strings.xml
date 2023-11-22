@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Era Animefy</string>
+    <string name="convert_text">Click any where to open an image</string>
+    <string name="title_activity_start">Era Animefy</string>
+    <string name="msg_welcome_start_screen">Welcome to Era Animefy</string>
+    <string name="msg_about">UIT - IS6103.CH1702</string>
+    <string name="msg_info_about">Develop by Nguyễn Duy Hiệu - Nguyễn Thị Kim Yến</string>
+    <string name="msg_reference_about">Reference: Learning to Cartoonize Using White-box Cartoon Representations</string>
+    <string name="msg_info_start_screen">Develop by Era team</string>
+    <string name="msg_loading">Loading …</string>
+    <string name="msg_double_press_back">Press back again to quit</string>
+    <string name="msg_permission_read_media_image_reason">Need permission to read media images</string>
+    <string name="msg_permission_write_media_image_reason">Need permission to write media images</string>
+    <string name="msg_permission_camera">Need permission to access camera</string>
+    <string name="txt_ok_btn">OK</string>
+    <string name="txt_test_btn">TEST BTN</string>
+    <string name="txt_test_msg">TEST MSG</string>
+    <string name="convert">Convert</string>
+    <string name="about">About</string>
+    <string name="save">SAVE</string>
+    <string name="open_new">NEW</string>
+    <string name="show_origin">SHOW ORIGIN</string>
+    <string name="show_converted">SHOW CONVERTED</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_convert_fragment">Hello convert fragment</string>
+    <string name="hello_info_fragment">Hello info fragment</string>
+</resources>
