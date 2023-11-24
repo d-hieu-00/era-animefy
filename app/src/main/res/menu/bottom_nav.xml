@@ -6,6 +6,11 @@
         android:icon="@drawable/ic_convert"
         android:title="@string/convert"/>
     <item
+        android:id="@+id/menu_camera"
+        android:enabled="true"
+        android:icon="@drawable/ic_camera"
+        android:title="@string/camera"/>
+    <item
         android:id="@+id/menu_about"
         android:enabled="true"
         android:icon="@drawable/ic_info"

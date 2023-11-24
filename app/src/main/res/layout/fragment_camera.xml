@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".launcher.FragmentConvert">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.camera.view.PreviewView
+            android:id="@+id/preview_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+        <FrameLayout
+            android:id="@+id/img_frame"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="@dimen/base"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/sub_menu">
+            <ImageView
+                android:id="@+id/img_original"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name" />
+            <ImageView
+                android:id="@+id/img_converted"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/app_name" />
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/sub_menu0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:orientation="horizontal"
+            android:background="?android:attr/windowBackground" >
+            <TextView
+                android:id="@+id/txt_open_camera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/open_camera"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:textSize="13sp"
+                android:padding="@dimen/base"
+                android:background="?android:attr/selectableItemBackground" />
+            <TextView
+                android:id="@+id/txt_take_picture"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/take_picture"
+                android:visibility="gone"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:textSize="13sp"
+                android:padding="@dimen/base"
+                android:background="?android:attr/selectableItemBackground" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/sub_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:background="?android:attr/windowBackground" >
+            <TextView
+                android:id="@+id/txt_open_action"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/open_new"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:textSize="13sp"
+                android:padding="@dimen/base"
+                android:background="?android:attr/selectableItemBackground" />
+            <TextView
+                android:id="@+id/txt_save_action"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:textSize="13sp"
+                android:padding="@dimen/base"
+                android:background="?android:attr/selectableItemBackground" />
+            <TextView
+                android:id="@+id/txt_show_action"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/show_origin"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/base"
+                android:textSize="13sp"
+                android:background="?android:attr/selectableItemBackground" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

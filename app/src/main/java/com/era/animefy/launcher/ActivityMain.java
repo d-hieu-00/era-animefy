@@ -6,14 +6,9 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -23,11 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.era.animefy.R;
-import com.era.animefy.utils.ImageGenerator;
 import com.era.animefy.utils.Utils;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import java.io.FileNotFoundException;
 import java.util.HashMap;
 
 public class ActivityMain extends AppCompatActivity {
@@ -41,6 +34,7 @@ public class ActivityMain extends AppCompatActivity {
     protected ProgressBar pbLoading;
     protected BottomNavigationView bottomNavigation;
     protected FragmentConvert fragmentConvert;
+    protected FragmentCamera fragmentCamera;
     protected FragmentInfo fragmentInfo;
 
     @Override
@@ -59,6 +53,7 @@ public class ActivityMain extends AppCompatActivity {
 
         // [3] Replace main frame to 'convert'
         fragmentConvert = new FragmentConvert(txtTitle, pbLoading);
+        fragmentCamera = new FragmentCamera(txtTitle, pbLoading);
         fragmentInfo = new FragmentInfo();
         replaceMainFrame(fragmentConvert);
 
@@ -82,6 +77,9 @@ public class ActivityMain extends AppCompatActivity {
             int id = item.getItemId();
             if (id == R.id.menu_convert) {
                 replaceMainFrame(fragmentConvert);
+                return true;
+            }  else if (id == R.id.menu_camera) {
+                replaceMainFrame(fragmentCamera);
                 return true;
             } else if (id == R.id.menu_about) {
                 replaceMainFrame(fragmentInfo);

@@ -7,6 +7,19 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/logo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="@id/welcome_msg"
+        app:layout_constraintRight_toRightOf="@id/welcome_msg"
+        app:layout_constraintBottom_toTopOf="@id/welcome_msg"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_logo"
+        app:shapeAppearance="@style/imageRounded"
+        app:strokeColor="@null" />
+
     <TextView
         android:id="@+id/welcome_msg"
         android:layout_width="wrap_content"
@@ -22,29 +35,15 @@
         android:layout_marginTop="@dimen/base"
         android:textSize="20sp" />
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:layout_constraintLeft_toLeftOf="@id/welcome_msg"
-        app:layout_constraintRight_toRightOf="@id/welcome_msg"
-        app:layout_constraintBottom_toTopOf="@id/welcome_msg"
-        app:layout_constraintTop_toTopOf="parent"
-        android:scaleType="fitCenter"
-        android:src="@drawable/ic_logo"
-        app:shapeAppearance="@style/imageRounded"
-        app:strokeColor="@null" />
-
     <TextView
+        android:id="@+id/details_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/msg_info_about"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:paddingTop="@dimen/base"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_msg"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.55"
         android:textSize="14sp"
         android:textAlignment="center"
         android:textColor="@color/text"
@@ -55,12 +54,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/msg_reference_about"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:paddingTop="@dimen/basex0.5"
+        app:layout_constraintTop_toBottomOf="@+id/details_1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59"
         android:textSize="14sp"
         android:textAlignment="center"
         android:textColor="@color/text"
